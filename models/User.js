@@ -9,6 +9,12 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true,
     minLenght: 4,
+    validate: {
+      validator: function (username) {
+        return username.length >= 4;
+      },
+      message: props => `Username ${props.value} is too short (have to be at least 4 charachters long)`
+    }
   },
   email: {
     type: String,
@@ -44,7 +50,7 @@ const UserSchema = new mongoose.Schema({
       required: true,
       validate: {
         validator: function (zipcode) {
-          return /^\D\D\D\D\D-\D\D\D\D$/.test(zipcode);
+          return /^\d\d\d\d\d-\d\d\d\d$/.test(zipcode);
         },
         message: props => `${props.value} is not a valid zipcode, zipcode should be in foroamt like #####-####`
       }
@@ -65,7 +71,7 @@ const UserSchema = new mongoose.Schema({
     required: true,
     validate: {
       validator: function (phone) {
-        return /^\D-\D\D\D-\D\D\D-\D\D\D\D$/.test(phone);
+        return /^\d-\d\d\d-\d\d\d-\d\d\d\d$/.test(phone);
       },
       message: props => `${props.value} is not a valid phone number, phone should be in foroamt like #-###-###-####`
     }
