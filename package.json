@@ -1,0 +1,28 @@
+{
+  "name": "lab4_users_database",
+  "version": "1.0.0",
+  "description": "Lab 04 – Mongoose Validation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxB0nd/COMP3133-lab04_100420936.git"
+  },
+  "keywords": [
+    "mongoose",
+    "validation",
+    "express"
+  ],
+  "author": "Max Bondarenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxB0nd/COMP3133-lab04_100420936/issues"
+  },
+  "homepage": "https://github.com/maxB0nd/COMP3133-lab04_100420936#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.16"
+  }
+}
