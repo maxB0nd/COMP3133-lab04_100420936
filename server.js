@@ -5,7 +5,7 @@ const userRouter = require('./routes/userRoutes');
 const app = express();
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://maxbond:7bYgQZdWX2mf3C5J@cluster0.3xbfj.mongodb.net/gbc_full_stack?retryWrites=true&w=majority', {
+mongoose.connect('REMOVED', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 });
